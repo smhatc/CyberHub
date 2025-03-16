@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hashing - Crypto Hub</title>
+        <link rel="icon" href="images/crypto-hub-logo.png" type="image/png">
+        <link rel="stylesheet" href="styles.css"> <!--Linking to external CSS file-->
+        <script src="script.js" defer></script> <!--Linking to external JS file-->
+</head>
+<body>
+        <!--Header section using the <header> element for accessibility with screen readers-->
+        <header>
+                <!--Container to use with Flexbox in CSS-->
+                <div class="header-flex">
+                        <!--Left-side branding block including website logo and title-->
+                        <div class="header-flex-branding">
+                                <a href="home.html"><img class="header-flex-branding-logo" src="images/crypto-hub-logo.png" alt="Crypto Hub Logo"></a>
+                                <p class="header-flex-branding-title"><a href="home.html">Crypto Hub</a></p>
+                        </div>
+                        <!--Right-side navigation hamburger menu button to display/hide the navigation links on smaller window sizes-->
+                        <button class="header-flex-navmenubtn">&#9776;</button>
+                        <!--Right-side navigation links using the <nav> element for accessibility with screen readers-->
+                        <nav class="header-flex-navigation">
+                                <ul class="header-flex-navigation-list">
+                                        <li class="header-flex-navigation-list-link"><a href="home.html">Home</a></li>
+                                        <li class="header-flex-navigation-list-link"><a href="symmetric-cryptography.html">Symmetric Cryptography</a></li>
+                                        <li class="header-flex-navigation-list-link"><a href="asymmetric-cryptography.html">Asymmetric Cryptography</a></li>
+                                        <li class="header-flex-navigation-list-link"><a href="hashing.html">Hashing</a></li>
+                                        <li class="header-flex-navigation-list-link"><a href="making-of.html">Making of Crypto Hub</a></li>
+                                        <li class="header-flex-navigation-list-link"><a href="our-story.html">Our Story</a></li>
+                                </ul>
+                        </nav>
+                </div>
+        </header>
+        <!--Main content section using the <main> element for accessibility with screen readers-->
+        <main>
+                <!-- Welcoming hero section with a heading and image to attract user attention upon page load using the <section> element for accessibility with screenreaders -->
+                <section class="subtopic-main-hero hashing-main-hero">
+                        <figure class="subtopic-subtopicfigure hashing-main-hero-hashingcoverfigure">
+                                <img class="subtopic-subtopicfigure-image hashing-main-hero-hashingcoverfigure-image" src="images/hashing-main-hero-hashingcoverfigure-image.jpg" alt="Hashing Banner">
+                                <figcaption class="subtopic-subtopicfigure-imagecaption hashing-main-hero-hashingcoverfigure-imagecaption">Source: <a href="https://media.licdn.com/dms/image/v2/C4E12AQHKHRRjsnyyjQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1647495364412?e=2147483647&v=beta&t=KplJ4xGdttMKs1-VKBgnshrsvNPfysmJDejZaRrKLeY" target="_blank">https://media.licdn.com</a></figcaption>
+                        </figure>
+                        <h1 class="subtopic-heading hashing-main-hero-heading">Hashing</h1>
+                        <p class="subtopic-para hashing-main-hero-para">Hello <span class="subtopic-firstname-container"></span>, this page teaches you everything you need to know to get started the world of Hashing.</p>
+                </section>     
+                <hr>
+                <!--Section for the primary content of the main section using the <section> element for accessibility with screen readers-->
+                <section class="subtopic-main-content hashing-main-content">
+                        <h2 class="subtopic-subheading hashing-main-content-subheading">What Is Hashing?</h2>
+                        <p class="subtopic-para hashing-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will get an overview of Hashing.</p>
+                        <p class="subtopic-para hashing-main-content-para">Unlike <a href="symmetric-cryptography.html">Symmetric Cryptography</a> and <a href="asymmetric-cryptography.html">Asymmetric Cryptography</a> which deal with the process of transforming (or encrypting) plaintext into unintelligible ciphertext to ensure data confidentiality, Hashing is the process of transforming any given data (such as a key, string of characters, file or any kind of input) into a fixed alphanumeric value called a hash value to ensure data integrity. The method of transforming or "mapping" data using a mathematical function to produce a hash value is called a hash function.</p>
+                        <h2 class="subtopic-subheading hashing-main-content-subheading">How It Works</h2>
+                        <p class="subtopic-para hashing-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will learn about the workings of hash functions, how the Hashing process works in general, and the advantages of Hashing.</p>
+                        <h3 class="subtopic-subheading hashing-main-content-subheading">Hash Functions</h3>
+                        <p class="subtopic-para hashing-main-content-para">Hash functions take input data and apply a series of mathematical operations to it, resulting in a fixed-length string of characters. Hash functions theoretically ensure that hash value is unique for different inputs, though in practice, there may be rare collisions where two different inputs produce the same hash.</p>
+                        <p class="subtopic-para-bold hashing-main-content-para-bold">To ensure secure data integrity using Hashing:</p>
+                        <ol class="subtopic-list hashing-main-content-list">
+                                <li class="subtopic-list-item hashing-main-content-list-item">The data to be hashed is prepared as input.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item">A Hashing algorithm is applied to generate a unique fixed-length hash value.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item">The hash value is transmitted or stored alongside the original data for future verification.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item">To verify the data’s integrity, the same Hashing algorithm is applied to the received or retrieved data, and the resulting hash is compared with the original hash value.</li>
+                        </ol>
+                        <figure class="subtopic-subtopicfigure hashing-main-content-hashingprocessfigure">
+                                <img class="subtopic-subtopicfigure-image hashing-main-content-hashingprocessfigure-image" src="images/hashing-main-content-hashingprocessfigure-image.png" alt="Hashing Process Demonstration">
+                                <figcaption class="subtopic-subtopicfigure-imagecaption hashing-main-content-hashingprocessfigure-imagecaption">Source: <a href="https://fireship.io/lessons/node-crypto-examples/img/hash.png" target="_blank">https://www.fireship.io</a></figcaption>
+                        </figure>
+                        <h3 class="subtopic-subheading hashing-main-content-subheading">Advantages of Hashing</h3>
+                        <ul class="subtopic-list hashing-main-content-list">
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Data Integrity:</span> Hashing ensures that data has not been altered or tampered with. Usually, data is hashed at a certain time and the hash value is protected in some way. At a later time, the data can be hashed again and compared to the protected value. If the hash values match, the data has not been altered.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Password Storage:</span> Rather than storing the actual password, systems store a hash of the password. When you log in, the system hashes the password you enter and compares it to the stored hash, ensuring security by never storing the plaintext password.</li>
+                        </ul>
+                        <h2 class="subtopic-subheading hashing-main-content-subheading">Practical Implementations & Algorithms</h2>
+                        <p class="subtopic-para hashing-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will learn about the most used algorithms and implementations of Hashing, including the important practice of salting in the overall Hashing process.</p>
+                        <h3 class="subtopic-heading hashing-main-content-subheading">Message-Digest Algorithm 5 (MD5):</h3>
+                        <ul class="subtopic-list hashing-main-content-list">
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Output:</span> 128 bits.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Security:</span> Insecure, vulnerable to collisions and preimage attacks. It is now obsolete for secure applications.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Performance:</span> Very fast but unsafe for cryptographic use.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Uses:</span> Historically for checksums and file integrity (now replaced by more secure methods).</li>
+                        </ul>
+                        <h3 class="subtopic-heading hashing-main-content-subheading">Secure Hash Algorithm 2 (SHA-2):</h3>
+                        <ul class="subtopic-list hashing-main-content-list">
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Output:</span> 224, 256, 384, or 512 bits.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Security:</span> Strong and resistant to collisions and preimage attacks.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Performance:</span> Slower than MD5 but widely used in modern cryptography (e.g. blockchain, TLS).</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Uses:</span> Common for digital signatures, certificates, and file integrity checks.</li>
+                        </ul>
+                        <h3 class="subtopic-heading hashing-main-content-subheading">Secure Hash Algorithm 3 (SHA-3):</h3>
+                        <ul class="subtopic-list hashing-main-content-list">
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Output:</span> Same sizes as SHA-2 (224, 256, 384, 512), but also has customizable lengths (SHAKE).</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Security:</span> Very strong, based on a different construction (Keccak), making it more resilient against some attacks.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Performance:</span> Slower than SHA-2 in many use cases but more versatile (customizable output length).</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Uses:</span> Advanced cryptographic applications and wherever flexibility is needed.</li>
+                        </ul>
+                        <h3 class="subtopic-subheading hashing-main-content-subheading">Salting in Hashing</h3>
+                        <ul class="subtopic-list hashing-main-content-list">
+                                <li class="subtopic-list-item hashing-main-content-list-item">Salting helps protect password hashes against dictionary attacks by introducing additional randomness. Password hash salting is when random data—a salt—is used as an additional input to a hash function that hashes a password.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item">The goal of salting is to defend against dictionary attacks or attacks against hashed passwords which use a rainbow table.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item">To salt a password hash, a new salt is randomly generated for each password. The salt and the password are concatenated and then processed with a cryptographic hash function. The resulting output (but not the original password) is stored with its salt in a database.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item">Salts can make the size of the rainbow table required for a successful attack prohibitively large. Since salts are different in each password, they also protect commonly used passwords or those who use the same password on several sites.</li>
+                        </ul>
+                        <figure class="subtopic-subtopicfigure hashing-main-content-saltingfigure">
+                                <img class="subtopic-subtopicfigure-image hashing-main-content-saltingfigure-image" src="images/hashing-main-content-saltingfigure-image.png" alt="Salting Process Demonstration">
+                                <figcaption class="subtopic-subtopicfigure-imagecaption hashing-main-content-saltingfigure-imagecaption">Source: <a href="https://fireship.io/lessons/node-crypto-examples/img/salt.png" target="_blank">https://www.fireship.io</a></figcaption>
+                        </figure>
+                        <h2 class="subtopic-subheading hashing-main-content-subheading">Challenges & Considerations</h2>
+                        <p class="subtopic-para hashing-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will learn about the challenges that Hashing algorithms face which should be considered before deployment.</p>
+                        <ul class="subtopic-list hashing-main-content-list">
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Risk of Collisions:</span> Hashing can sometimes suffer from collisions, which occur when two different inputs produce the same hash value. Collisions can lead to decreased performance and increased lookup time, especially if the number of collisions is high.</li>
+                                <li class="subtopic-list-item hashing-main-content-list-item"><span class="subtopic-list-item-bold hashing-main-content-list-item-bold">Non-reversible:</span> Since hash functions are intended to be one-way functions, reversing the process and getting the original input data isn't computationally viable. This could be a drawback if reverse lookup is necessary.</li>
+                        </ul>
+                        <h2 class="subtopic-subheading hashing-main-content-subheading">Conclusion & Recommendations</h2>
+                        <p class="subtopic-para hashing-main-content-para"> To summarize, <span class="subtopic-firstname-container"></span>, Hashing is an essential concept in both cryptography and data structures. It transforms input data into fixed-length, unique hash values, making it useful for a variety of purposes like ensuring data integrity, password storage, efficient searching, and error detection. However, Hashing does come with certain limitations, such as the possibility of collisions, the non-reversible nature of hash functions, and the complexity in implementing hash-based systems.</p>
+                        <p class="subtopic-para hashing-main-content-para"> Today, it is highly recommended to follow the best practices for Hashing to ensure secure and efficient data handling. Use modern hash functions like SHA-2 or SHA-3 while avoiding outdated ones like MD5 and SHA-1 to prevent vulnerabilities such as collision attacks. Always salt passwords to enhance security, making them resistant to rainbow table and dictionary attacks. Efficient collision-handling mechanisms, such as chaining or open addressing, are crucial for systems like hash tables. Regularly update Hashing algorithms to stay ahead of emerging weaknesses, and balance performance with security needs to choose the most suitable algorithm for your application.</p>
+                </section>
+        </main>
+        <!--Footer section using the <footer> element for accessibility with screen readers-->
+        <footer>
+                <!--Branding block including website logo and copyright information-->
+                <div class="footer-branding">
+                        <a href="home.html"><img class="footer-branding-logo" src="images/crypto-hub-logo.png" alt="Crypto Hub Logo"></a>
+                        <p class="footer-branding-copyright">&copy; 2024 Crypto Hub</p>
+                </div>
+                <!--Contact information with an email link-->
+                <p class="footer-contact">Need to get in touch? Email: <a href="mailto:202301067@student.polytechnic.bh">202301067@student.polytechnic.bh</a></p>
+        </footer>
+</body>
+</html>
