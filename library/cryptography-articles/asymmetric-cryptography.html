@@ -26,77 +26,17 @@
                         </ul>
                 </nav>
         </header>
-        <!--Main content section using the <main> element for accessibility with screen readers-->
         <main>
-                <!-- Welcoming hero section with a heading and image to attract user attention upon page load using the <section> element for accessibility with screenreaders -->
-                <section class="subtopic-main-hero asymmcrypt-main-hero">
-                        <figure class="subtopic-subtopicfigure asymmcrypt-main-hero-keysfigure">
-                                <img class="subtopic-subtopicfigure-image asymmcrypt-main-hero-keysfigure-image" src="images/asymmcrypt-main-hero-keysfigure-image.png" alt="Asymmetric Cryptography Banner">
-                                <figcaption class="subtopic-subtopicfigure-imagecaption asymmcrypt-main-hero-keysfigure-imagecaption">Source: <a href="https://media.licdn.com/dms/image/v2/D4E12AQGJEfu0k30poQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1668610455374?e=2147483647&v=beta&t=cApRtlVKuCs-sPwDmockgx1G5zWMmZsK4e9asuLxrk4" target="_blank">https://media.licdn.com</a></figcaption>
-                        </figure>
-                        <h1 class="subtopic-heading asymmcrypt-main-hero-heading">Asymmetric Cryptography</h1>
-                        <p class="subtopic-para asymmcrypt-main-hero-para">Hello <span class="subtopic-firstname-container"></span>, this page teaches you all you need to know to get started in the world of Asymmetric Cryptography.</p>
-                </section>
-                <hr>
-                <!--Section for the primary content of the main section using the <section> element for accessibility with screen readers-->
-                <section class="subtopic-main-content asymmcrypt-main-content">
-                        <h2 class="subtopic-subheading asymmcrypt-main-content-subheading">What Is Asymmetric Cryptography?</h2>
-                        <p class="subtopic-para asymmcrypt-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will get an overview of Asymmetric Cryptography.</p>
-                        <p class="subtopic-para asymmcrypt-main-content-para">Asymmetric Cryptography is a type of cryptography that uses two keys for encryption and decryption, unlike <a href="symmetric-cryptography.html">Symmetric Cryptography</a>, which uses only one. These keys are the private and public keys, and they work together to improve communication security on otherwise risky networks. In simple terms, it is a technology that aims to ensure a communication’s confidentiality and integrity on dangerous networks such as the internet.</p>
-                        <h2 class="subtopic-subheading asymmcrypt-main-content-subheading">How It Works</h2>
-                        <p class="subtopic-para asymmcrypt-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will learn the main concepts of Asymmetric Cryptography and the details of how it works, highlighting its advantages over other types of cryptography.</p>
-                        <h3 class="subtopic-subheading asymmcrypt-main-content-subheading">Encryption & Decryption</h3>
-                        <ul class="subtopic-list asymmcrypt-main-content-list">
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item"><span class="subtopic-list-item-bold asymmcrypt-main-content-list-item-bold">Public Key:</span> This key is shared openly and can be distributed to anyone. Its main purpose is to encrypt messages for a specific receiver.</li>
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item"><span class="subtopic-list-item-bold asymmcrypt-main-content-list-item-bold">Private Key:</span> This key is kept secret by the owner. It is used to decrypt messages that were encrypted with the owner’s public key, but it can also be used to create things like digital signatures which help verify a message's origin.</li>
-                        </ul>
-                        <p class="subtopic-para asymmcrypt-main-content-para">When a sender wants to communicate securely with a recipient, they use the recipient's public key to encrypt the message. Once encrypted, the message can only be decrypted by the recipient's private key, ensuring that only the intended recipient can read it.</p>
-                        <p class="subtopic-para-bold asymmcrypt-main-content-para-bold">To send a secure message using Asymmetric Cryptography:</p>
-                        <ol class="subtopic-list asymmcrypt-main-content-list">
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item">The sender retrieves the recipient's public key.</li>
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item">The sender encrypts the message using the recipient’s public key.</li>
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item">The encrypted message is sent over the internet.</li>
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item">Upon receiving the message, the recipient uses their private key to decrypt it.</li>
-                        </ol>
-                        <figure class="subtopic-subtopicfigure asymmcrypt-main-content-asymmcryptfigure">
-                                <img class="subtopic-subtopicfigure-image asymmcrypt-main-content-asymmcryptfigure-image" src="images/asymmcrypt-main-content-asymmcryptfigure-image.png" alt="Asymmetric Cryptography Process Demonstration">
-                                <figcaption class="subtopic-subtopicfigure-imagecaption asymmcrypt-main-content-asymmcryptfigure-imagecaption">Source: <a href="https://fireship.io/lessons/node-crypto-examples/img/asymmetric-encryption.png" target="_blank">https://www.fireship.io</a></figcaption>
-                        </figure>
-                        <h3 class="subtopic-subheading asymmcrypt-main-content-subheading">Advantages of Asymmetric Cryptography</h3>
-                        <ul class="subtopic-list asymmcrypt-main-content-list">
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item"><span class="subtopic-list-item-bold asymmcrypt-main-content-list-item-bold">Enhanced Security:</span> Unlike <a href="symmetric-cryptography.html">Symmetric Cryptography</a>, which uses the same key for encryption and decryption, Asymmetric Cryptography eliminates the need to share a secret key, reducing the risk of interception.</li>
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item"><span class="subtopic-list-item-bold asymmcrypt-main-content-list-item-bold">Scalability:</span> Asymmetric systems allow secure communication between multiple parties without the need to share secret keys, making them more scalable for large networks.</li>
-                        </ul>
-                        <h2 class="subtopic-subheading asymmcrypt-main-content-subheading">Practical Implementations & Algorithms</h2>
-                        <p class="subtopic-para asymmcrypt-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will learn about the practical implementations of Asymmetric Cryptography, including some of its more popular algorithms and the important concept of digital signatures.</p>
-                        <h3 class="subtopic-subheading asymmcrypt-main-content-subheading">Algorithms</h3>
-                        <p class="subtopic-para asymmcrypt-main-content-para">Users generate a key pair through complex algorithms. Common algorithms include RSA, Digital Signature Algorithm (DSA), and Elliptic Curve Cryptography (ECC). While there are some differences in the details of these algorithms, they all share the same Asymmetric Cryptography principles in their operation, and their security is based on mathematical problems which are computationally difficult to solve.</p>
-                        <h3 class="subtopic-subheading asymmcrypt-main-content-subheading">Digital Signatures</h3>
-                        <p class="subtopic-para asymmcrypt-main-content-para">Digital signatures are used when a sender wants to prove to a recipient that they are indeed the sender of a specific message. This is done when the sender uses their own private key to "sign" a hash (see <a href="hashing.html">Hashing</a>) of the original message. Then, if the recipient is able to decrypt that signed message with the sender's public key, it means that the sender is indeed who they say they are.</p>
-                        <figure class="subtopic-subtopicfigure asymmcrypt-main-content-signingfigure">
-                                <img class="subtopic-subtopicfigure-image asymmcrypt-main-content-signingfigure-image" src="images/asymmcrypt-main-content-signingfigure-image.png" alt="Digital Signatures Process Demonstration">
-                                <figcaption class="subtopic-subtopicfigure-imagecaption asymmcrypt-main-content-signingfigure-imagecaption">Source: <a href="https://fireship.io/lessons/node-crypto-examples/img/signing.png" target="_blank">https://www.fireship.io</a></figcaption>
-                        </figure>
-                        <h2 class="subtopic-subheading asymmcrypt-main-content-subheading">Challenges & Considerations</h2>
-                        <p class="subtopic-para asymmcrypt-main-content-para">In this section, <span class="subtopic-firstname-container"></span>, you will learn about the challenges that Asymmetric Cryptography faces which should be taken into consideration before adoption.</p>
-                        <ul class="subtopic-list asymmcrypt-main-content-list">
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item"><span class="subtopic-list-item-bold asymmcrypt-main-content-list-item-bold">Key Management:</span> The security of the system relies heavily on the protection of private keys. If a private key is compromised, the security of the associated public key is lost.</li>
-                                <li class="subtopic-list-item asymmcrypt-main-content-list-item"><span class="subtopic-list-item-bold asymmcrypt-main-content-list-item-bold">Performance:</span> Asymmetric Cryptography is slower than <a href="symmetric-cryptography.html">Symmetric Cryptography</a> due to the complexity of the algorithms involved. As a result, it is often used in conjunction with <a href="symmetric-cryptography.html">Symmetric Cryptography</a>, where asymmetric encryption is used to exchange a symmetric key.</li>
-                        </ul>
-                        <h2 class="subtopic-subheading asymmcrypt-main-content-subheading">Conclusion & Recommendations</h2>
-                        <p class="subtopic-para asymmcrypt-main-content-para">To sum up, <span class="subtopic-firstname-container"></span>, while powerful, Asymmetric Cryptography is merely a component of what should be a much wider security strategy that works to enable secure communication in the digital world by authenticating identities and ensuring the integrity and confidentiality of data.</p>
-                        <p class="subtopic-para asymmcrypt-main-content-para">Today, it is highly recommended for any organization, website, or even individual to employ Asymmetric Cryptography in their online communications to ensure their sensitive, personal information stays outside the hands of malicious actors.</p>
-                </section>
+
         </main>
-        <!--Footer section using the <footer> element for accessibility with screen readers-->
-        <footer>
+        <footer class="page-footer">
                 <!--Branding block including website logo and copyright information-->
-                <div class="footer-branding">
-                        <a href="home.html"><img class="footer-branding-logo" src="images/crypto-hub-logo.png" alt="Crypto Hub Logo"></a>
-                        <p class="footer-branding-copyright">&copy; 2024 Crypto Hub</p>
+                <div class="page-footer-branding">
+                        <a href="index.html"><img class="page-footer-branding-logo" src="images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
+                        <p class="page-footer-branding-copyright">&copy; 2025 Cyber Hub</p>
                 </div>
                 <!--Contact information with an email link-->
-                <p class="footer-contact">Need to get in touch? Email: <a href="mailto:202301067@student.polytechnic.bh">202301067@student.polytechnic.bh</a></p>
+                <p class="page-footer-contact">Need to get in touch? Email: <a href="mailto:202301067@student.polytechnic.bh">202301067@student.polytechnic.bh</a></p>
         </footer>
 </body>
 </html>
