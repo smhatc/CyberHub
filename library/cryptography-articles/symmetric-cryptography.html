@@ -12,27 +12,91 @@
         <header class="page-header">
                 <!--Left-side branding block including website logo and title-->
                 <div class="page-header-branding">
-                        <a href="index.html"><img class="page-header-branding-logo" src="images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
-                        <p class="page-header-branding-title"><a href="index.html">Cyber Hub</a></p>
+                        <a href="../../index.html"><img class="page-header-branding-logo" src="../../images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
+                        <p class="page-header-branding-title"><a href="../../index.html">Cyber Hub</a></p>
                 </div>
                 <!--Right-side navigation hamburger menu button to display/hide the navigation links on smaller window sizes-->
                 <button class="page-header-navmenubtn">&#9776;</button>
                 <!--Right-side navigation links using the <nav> element for accessibility with screen readers-->
                 <nav class="page-header-navigation">
                         <ul class="page-header-navigation-list">
-                                <li class="page-header-navigation-list-link"><a href="index.html">Home</a></li>
-                                <li class="page-header-navigation-list-link"><a href="library.html">Library</a></li>
-                                <li class="page-header-navigation-list-link"><a href="sign-in.html" class="sign-in-link">Sign In</a></li>
+                                <li class="page-header-navigation-list-link"><a href="../../index.html">Home</a></li>
+                                <li class="page-header-navigation-list-link"><a href="../../library.html">Library</a></li>
+                                <li class="page-header-navigation-list-link"><a href="../../sign-in.html" class="sign-in-link">Sign In</a></li>
                         </ul>
                 </nav>
         </header>
         <main>
-
+                <!-- Welcoming hero section with a heading and image to attract user attention upon page load using the <section> element for accessibility with screenreaders -->
+                <section class="blog-main-hero">
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/symmcrypt-main-hero-keylockfigure-image.jpg" alt="Symmetric Cryptography Banner">
+                        </figure>
+                        <h1>Symmetric Cryptography</h1>
+                        <p class="blog-para">This page acts as a getting-started point to the world of Symmetric Cryptography.</p>
+                </section>
+                <hr>
+                <!--Section for the primary content of the main section using the <section> element for accessibility with screen readers-->
+                <section class="blog-main-content">
+                        <h2 class="blog-subheading">What Is Symmetric Cryptography?</h2>
+                        <p class="blog-para">Symmetric Cryptography is a type of cryptography which uses a single key for encryption and decryption, unlike <a href="asymmetric-cryptography.html">Asymmetric Cryptography</a>, which uses two keys. Because of this, it is one of the best encryption methods for applications which require encryption of enormous quantities of data as using only a single key for encryption and decryption is much faster than using two. At the same time, this also means that the protection of this one key is essential in maintaining the security of the symmetric system.</p>
+                        <h2 class="blog-subheading">How It Works</h2>
+                        <h3 class="blog-subheading">Encryption & Decryption</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Shared Key:</span> A single secret key is used for both encrypting and decrypting messages. This key must remain confidential to ensure the security of the communication.</li>
+                        </ul>
+                        <p class="blog-para">When a sender wants to communicate securely with a recipient, they use the shared secret key to encrypt the message. The recipient then uses the same key to decrypt the message, ensuring that only those who possess the key can access the original information.</p>
+                        <p class="blog-para-bold">To send a secure message using Symmetric Cryptography:</p>
+                        <ol class="blog-list">
+                                <li class="blog-list-item">Both the sender and receiver agree on a shared secret key in advance.</li>
+                                <li class="blog-list-item">The sender encrypts the message using the shared symmetric key.</li>
+                                <li class="blog-list-item">The encrypted message is transmitted over the network.</li>
+                                <li class="blog-list-item">The recipient decrypts the message using the same symmetric key.</li>
+                        </ol>
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/symmcrypt-main-content-symmcryptfigure-image.png" alt="Symmetric Cryptography Process Demonstration">
+                        </figure>
+                        <h3 class="blog-subheading">Advanced Encryption Standard (AES)</h3>
+                        <p class="blog-para">One of the most—if not the most—popular symmetric algorithms is the Advanced Encryption Standard (AES). AES encrypts data in blocks of a fixed size, and its encryption keys range from 128 to 256 bits in length.</p>
+                        <p class="blog-para">This algorithm does not encrypt data once only, rather it applies multiple rounds of changes to the encrypted data.</p>
+                        <p class="blog-para-bold">These rounds have several stages, and they are as follows:</p>
+                        <ol class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">SubBytes:</span> In this stage, bytes are substituted with other bytes using an S-lookup table. This is done through complex calculations.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">ShiftRows:</span> In this stage, rows in the block are moved a specific number of positions.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">MixColumns:</span> In this stage, matrix multiplication is performed on each column, changing the byte values of that column.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">AddRoundKey:</span> In this stage, a round key derived from the encryption key is added to the result of the third stage.</li>
+                        </ol>
+                        <p class="blog-para">Finally, the decryption process is done in reverse.</p>
+                        <h3 class="blog-subheading">Data Encryption Standard (DES)</h3>
+                        <p class="blog-para">The Data Encryption Standard (DES) is a symmetric encryption algorithm that uses a 56-bit key to encrypt data, enhancing security. However, DES has major weaknesses, as recent advancements in cyberattack methods have made it easier to break. Because of this, its usage has significantly declined in favor of more secure algorithms like the aforementioned AES.</p>
+                        <p class="blog-para">While some mitigations have been developed to strengthen DES, they have been proven to be ineffective very quickly, leaving the DES algorithm to become abandoned by anyone needing to secure sensitive information.</p>
+                        <p class="blog-para-bold">With that said, DES works in two main steps:</p>
+                        <ol class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Key Transformation:</span> A 64-bit initial key is reduced to 56 bits by excluding every 8th bit.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Expansion Permutation:</span> After an initial permutation, the 64-bit plaintext block is divided into left and right halves. The right half (32 bits) is expanded into 48 bits by splitting it into 4-bit blocks, then adding extra bits.</li>
+                        </ol>
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/symmcrypt-main-content-symmkeyfigure-image.jpg" alt="Symmetric Encryption Key Art">
+                        </figure>
+                        <h2 class="blog-subheading">Benefits of Symmetric Cryptography</h2>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Speed and Efficiency:</span> Symmetric Cryptography is faster than <a href="asymmetric-cryptography.html">Asymmetric Cryptography</a> since it uses simpler algorithms and a single key for both encryption and decryption.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Low Resource Usage:</span> Due to its simplicity, Symmetric Cryptography requires low computational power, making it ideal for encrypting large amounts of data or use in resource-constrained environments.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Challenges & Considerations</h2>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Key Management:</span> The security of Symmetric Cryptography depends entirely on keeping the shared secret key safe. If the key is leaked or compromised, the entire communication is exposed to potential attackers.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Scalability:</span> In environments with many users, Symmetric Cryptography becomes challenging to scale. Each pair of users requires a unique shared key, leading to complex key management as the number of participants grows.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Conclusion & Recommendations</h2>
+                        <p class="blog-para">In conclusion, Symmetric Cryptography is known for its fast and efficient encryption and decryption, and it is preferred for use over <a href="asymmetric-cryptography.html">Asymmetric Cryptography</a> in situations such as protecting sensitive information stored at rest in databases, for example.</p>
+                        <p class="blog-para">Of the algorithms used in Symmetric Cryptography, the most well-known are AES and DES. AES is recommended for organizations, websites, and individuals holding mission-critical information, while DES is okay for less sensitive use cases.</p>
+                </section>
         </main>
         <footer class="page-footer">
                 <!--Branding block including website logo and copyright information-->
                 <div class="page-footer-branding">
-                        <a href="index.html"><img class="page-footer-branding-logo" src="images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
+                        <a href="../../index.html"><img class="page-footer-branding-logo" src="../../images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
                         <p class="page-footer-branding-copyright">&copy; 2025 Cyber Hub</p>
                 </div>
                 <!--Contact information with an email link-->
