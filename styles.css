@@ -42,7 +42,7 @@
 
         --outline: 0.4rem solid #0f62fe;
 
-        --box-shadow-1: 0rem 0rem 1rem 0.4rem #b58f5f;
+        --box-shadow-1: 0rem 0rem 1rem 0.4rem #de8b25;
         --box-shadow-2: 0rem 0rem 1rem 0.4rem #37505d;
         --box-shadow-3: 0rem 0rem 2rem -0.1rem #00000066;
         --box-shadow-fail: 0rem 0rem 1rem 0.4rem #b82626;
@@ -50,7 +50,7 @@
         --color-text-1: #1a1c20;
         --color-text-2: #ebebef;
         --color-text-3: #37505d;
-        --color-links-1: #b58f5f;
+        --color-links-1: #37505d;
         --color-links-2: #ebebef;
         --color-fail: #b82626;
         --color-success: #26b826;
@@ -60,7 +60,7 @@
         --bg-color-1: #ebebef;
         --bg-color-2: #dce0e6;
         --bg-color-3: #37505d;
-        --bg-color-4: #b58f5f;
+        --bg-color-4: #de8b25;
         --bg-color-5: #090c1b;
 }
 
@@ -309,9 +309,9 @@ hr {
 
 .page-header-navigation-list-link .sign-in-link {
         padding: 0.5em 0.75em;
-        border: var(--border-dashed);
-        background-color: var(--bg-color-4);
-        color: var(--color-text-1);
+        border: var(--border-solid);
+        background-color: var(--bg-color-3);
+        color: var(--color-text-2);
 }
 
 @media (max-width: 1460px) {
@@ -374,3 +374,4 @@ hr {
 }
       
 /* ============================================ */
+
