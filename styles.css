@@ -440,3 +440,43 @@ main {
 }
 
 /* =================================================== */
+
+/* ========== BLOG PAGES MAIN SECTION STYLING ========== */
+
+.blog-main-hero,
+.blog-main-content {
+        /* Styling the <section> containers for the hero and content sections */
+        width: fit-content;
+        max-width: 100%;
+        padding-inline: 2.5em;
+        margin: 3em auto;
+}
+
+.blog-figure {
+        /* Styling the <figure> elements containing the images and captions and making sure the images don't get too small or too big */
+        max-width: 750px;
+        margin: auto;
+}
+
+.blog-figure-image {
+        /* Making sure the images don't escape the <figure> element */
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--border-radius-1);
+        box-shadow: var(--box-shadow-3);
+}
+
+.blog-para-bold,
+.blog-list-item-bold {
+        /* Setting some text to be bold so that it stands out more */
+        font-weight: var(--font-weight-text-l);
+}
+
+.blog-list {
+        /* Slightly indenting any lists used */
+        max-width: var(--para-ol-ul-width);
+        padding-inline: 1.25em;
+        margin-block: 0.5em;
+}
+
+/* ================================================================ */
