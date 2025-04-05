@@ -1,0 +1,376 @@
+/* ========== ELEMENT-LEVEL STYLING AND VARIABLES SETUP ========== */
+
+*,
+*::before,
+*::after {
+        /* Resetting default browser styling for consistency */
+        padding: 0;
+        margin: 0;
+        border: none;
+        outline: none;
+        /* Adds padding and border to total element width for easier calculations */
+        box-sizing: border-box;
+}
+
+:root {
+        /* Creating reusable variables for maintainable styling */
+        --font-family-text: Arial, sans-serif;
+        --font-family-h1h2: Calibri, sans-serif;
+
+        --font-size-text-ss: 1.5rem;
+        --font-size-text-s: 1.8rem;
+        --font-size-text-m: 2.1rem;
+        --font-size-text-l: 2.4rem;
+        --font-size-h3: 3rem;
+        --font-size-h2: 3.6rem;
+        --font-size-h1: 4.2rem;
+
+        --font-weight-text-s: 500;
+        --font-weight-text-l: 600;
+
+        --line-height-text: 1.6;
+        --line-height-h3: 1.3;
+        --line-height-h2: 1.2;
+        --line-height-h1: 1.1;
+
+        --para-ol-ul-width: 75ch;
+
+        --border-solid: 0.2rem solid #1a1c20;
+        --border-dashed: 0.2rem dashed #1a1c20;
+        --border-radius-1: 0.75rem;
+        --border-radius-2: 7.5rem;
+
+        --outline: 0.4rem solid #0f62fe;
+
+        --box-shadow-1: 0rem 0rem 1rem 0.4rem #b58f5f;
+        --box-shadow-2: 0rem 0rem 1rem 0.4rem #37505d;
+        --box-shadow-3: 0rem 0rem 2rem -0.1rem #00000066;
+        --box-shadow-fail: 0rem 0rem 1rem 0.4rem #b82626;
+
+        --color-text-1: #1a1c20;
+        --color-text-2: #ebebef;
+        --color-text-3: #37505d;
+        --color-links-1: #b58f5f;
+        --color-links-2: #ebebef;
+        --color-fail: #b82626;
+        --color-success: #26b826;
+        --color-h1h2-1: #1c2930;
+        --color-h1h2-2: #ebebef;
+
+        --bg-color-1: #ebebef;
+        --bg-color-2: #dce0e6;
+        --bg-color-3: #37505d;
+        --bg-color-4: #b58f5f;
+        --bg-color-5: #090c1b;
+}
+
+html {
+        /* Scales the default browser font size down to 10px from 16px for easier em and rem calculations */
+        font-size: 62.5%;
+        /* Styles the scrollbar and adds smooth scrolling */
+        scroll-behavior: smooth;
+        scrollbar-color: var(--bg-color-3) var(--bg-color-2);
+}
+
+body {
+        /* Setting general global styles, may be overridden by more specific styles later */
+        font-family: var(--font-family-text);
+        font-size: var(--font-size-text-s);
+        font-weight: var(--font-weight-text-s);
+        line-height: var(--line-height-text);
+        background-color: var(--bg-color-1);
+        color: var(--color-text-1);
+}
+
+h1,
+h2,
+h3 {
+        /* Setting generic heading styles */
+        font-family: var(--font-family-h1h2);
+        font-weight: var(--font-weight-text-l);
+        color: var(--color-h1h2-1);
+}
+
+h1 {
+        /* Setting <h1> specific styles */
+        font-size: var(--font-size-h1);
+        line-height: var(--line-height-h1);
+}
+
+h2 {
+        /* Setting <h2> specific styles */
+        font-size: var(--font-size-h2);
+        line-height: var(--line-height-h2);
+}
+
+h3 {
+        /* Setting <h3> specific styles */
+        font-size: var(--font-size-h3);
+        line-height: var(--line-height-h3);
+}
+
+p,
+ol {
+        /* Setting max <p> and <ol> width for readability */
+        max-width: var(--para-ol-ul-width);
+        margin-block: 0.5em;
+}
+
+li {
+        /* Setting some <li> top and bottom margin for readability */
+        margin-block: 0.5em;
+}
+
+a {
+        /* Setting link to position relative so that the pseudo-element underline with position: absolute; can stick to the bottom of the <a> element instead of the viewport */
+        position: relative;
+        border-radius: var(--border-radius-1); /* Added so that the outline on header and footer links is rounded */
+        font-weight: var(--font-weight-text-l);
+        text-decoration: none;
+        color: var(--color-links-1);
+}
+
+a::after {
+        /* Creating pseudo-element to produce link hover and focus animation with position: absolute; to place it exactly under the <a> element */
+        /* Note: underline on hover and focus was not used as it does not allow for the animation effect we want */
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.2s ease 0.1s;
+        width: 100%;
+        height: 0.2rem;
+        background-color: var(--color-links-1);
+}
+
+a:hover::after,
+a:focus-visible::after {
+        /* The link hover and focus animation */
+        transform: scaleX(1);
+}
+
+button,
+input {
+        /* Adding general button and input styling with transition (no inheritance by default) */
+        display: block;
+        transition: box-shadow 0.4s ease;
+        padding: 0.375em;
+        border: var(--border-solid);
+        border-radius: var(--border-radius-1);
+        font-family: var(--font-family-text);
+        font-size: var(--font-size-text-s);
+        font-weight: var(--font-weight-text-s);
+        line-height: var(--line-height-text);
+        background-color: var(--bg-color-2);
+        color: var(--color-text-1);
+}
+
+button:hover,
+button:focus-visible,
+input:hover:not(.main-registration-ctaform-form-inputerror),
+input:focus-visible:not(.main-registration-ctaform-form-inputerror) {
+        /* Adding general input and button hover and focus effect, can be overridden by more specific styles later as needed */
+        box-shadow: var(--box-shadow-2);
+}
+
+button:hover,
+input[type="submit"]:hover {
+        /* Changing cursor to pointer on button elements */
+        cursor: pointer;
+}
+
+hr {
+        /* Giving margin to and setting the width of <hr> elements */
+        width: 37.5%;
+        height: 0.1rem;
+        margin: 2em auto;
+        background-color: var(--bg-color-3);
+}
+
+/* ================================================================ */
+
+/* ========== SHARED HEADER SECTION STYLING ========== */
+
+.page-header {
+        /* Setting header background and sticking it to the top of the page with a transition effect for opacity */
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        opacity: 1;
+        transition: opacity 0.4s ease;
+        padding: 0.5em;
+        background-color: var(--bg-color-2);
+}
+
+.page-header a,
+.page-header button {
+        /* Adding a smooth transition to the outline on tab focus effect */
+        transition: outline 0.2s ease;
+}
+
+.page-header a:focus-visible,
+.page-header button:focus-visible {
+        /* Adding outline to links and buttons when focused with keyboard navigation */
+        outline: var(--outline);
+}
+
+.page-header-sticky {
+        /* Decreasing the header opacity slightly after the user scrolls down, done through JS */
+        opacity: 97.75%;
+}
+
+.page-header {
+        /* Using Flexbox in the header to position elements with space-evenly to center-align the logo, title, and list items when they wrap + looks better on larger window sizes */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+}
+
+.page-header-branding {
+        /* Creating sub-Flexbox container to align logo and title */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        /* Setting font size to make header title <p> look bigger */
+        /* Setting size on the container <div> instead of <p> to help scale logo with font size using em */
+        padding: 0 0.5em;
+        margin: 0 0.5em;
+        font-size: var(--font-size-text-l);
+}
+
+.page-header-branding-logo {
+        /* Setting header logo dimensions */
+        max-width: 3.75em;
+        max-height: 3.75em;
+}
+
+.page-header-branding-title a {
+        /* Removing link color styling from the title */
+        margin-left: 0.5em;
+        font-family: var(--font-family-h1h2);
+        color: var(--color-h1h2-1);
+}
+
+.page-header-branding a::after {
+        /* Removing link hover animation for header logo */
+        content: none;
+}
+
+.page-header-navmenubtn {
+        /* Hiding the navigation menu button for large enough window sizes, only showing it later when needed */
+        display: none;
+        padding: 0 0.5em;
+        margin: 0 0.5em;
+        border: none;
+        font-size: var(--font-size-text-l);
+}
+
+.page-header-navmenubtn:hover,
+.page-header-navmenubtn:focus-visible {
+        /* Removing element-level box-shadow effect on hover and focus for the menu button */
+        box-shadow: none;
+}
+
+.page-header-navigation {
+        /* Styling <nav> element on the right */
+        padding: 0 0.5em;
+        margin: 0 0.5em;
+        font-size: var(--font-size-text-m);
+}
+
+.page-header-navigation-list {
+        /* Removing navigation list bullet points */
+        list-style: none;
+}
+
+.page-header-navigation-list-link {
+        /* Placing navigation list items on the same line */
+        display: inline;
+        padding: 0 0.5em;
+        margin: 0 0.5em;
+}
+
+.page-header-navigation-list-link a {
+        /* Styling navigation list links */
+        font-family: var(--font-family-h1h2);
+        color: var(--color-h1h2-1);
+}
+
+.page-header-navigation-list-link a::after {
+        /* Removing link hover animation for header navigation list links */
+        content: none;
+}
+
+.page-header-navigation-list-link .sign-in-link {
+        padding: 0.5em 0.75em;
+        border: var(--border-dashed);
+        background-color: var(--bg-color-4);
+        color: var(--color-text-1);
+}
+
+@media (max-width: 1460px) {
+        /* Creating media query to stop the navigation items from being squashed on smaller window sizes */
+        .page-header-branding {
+                /* Lowering margin between branding block and other blocks */
+                padding: 0 0.25em;
+                margin: 0 0.25em;
+        }
+
+        .page-header-branding-title a {
+                /* Lowering margin between logo and title */
+                margin-left: 0.25em;
+        }
+        
+        .page-header-navmenubtn {
+                /* Showing the hamburger menu button in preparation for fixing the squashed navigation list */
+                display: block;
+                padding: 0 0.25em;
+                margin: 0 0.25em;
+        }
+
+        .page-header-navigation {
+                /* Changing the default navigation list style to take the full screen, adjusting the spacing between the links, hiding the new navigation by default, and adding a transition for when the navigation is displayed with JS */
+                position: fixed;
+                top: 9.5rem;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 100;
+                visibility: hidden;
+                transform: translateY(-1%);
+                transition: transform 0.2s ease;
+                height: 100%;
+                padding: 1em 2em;
+                margin: 1em 0;
+                background-color: var(--bg-color-2);
+        }
+
+        .page-header-navigation-menuactive {
+                /* Showing and styling the navigation list by adding this class with JS upon clicking the navigation menu button */
+                visibility: visible;
+                transform: translateY(0%);
+        }
+
+        .page-header-navigation-bodyactive {
+                /* This class is added to the <body> element by JS */
+                /* Hides the scrollbar when the full screen navigation is opened */
+                /* Right padding is dynamically calculated and added by JS to take up the space of the scrollbar and avoid a layout shift */
+                overflow: hidden;
+                background-color: var(--bg-color-2);
+        }
+
+        .page-header-navigation-list-link {
+                /* Setting list items to display: block; again so that they are listed vertically */
+                display: block;
+                padding: 0.5em 0;
+                margin: 0.5em 0;
+        }  
+}
+      
+/* ============================================ */
