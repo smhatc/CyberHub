@@ -375,3 +375,68 @@ hr {
       
 /* ============================================ */
 
+.page-footer {
+        /* Generic footer styling */
+        padding: 2em;
+        text-align: center;
+        background-color: var(--bg-color-2);
+}
+
+.page-footer a,
+.page-footer button {
+        /* Adding a smooth transition to the outline on tab focus effect */
+        transition: outline 0.2s ease;
+}
+
+.page-footer a:focus-visible,
+.page-footer button:focus-visible {
+        /* Adding outline to links and buttons when focused with keyboard navigation */
+        outline: var(--outline);
+}
+
+.page-footer-branding {
+        /* Using Flexbox to align logo with text */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: 1em;
+}
+
+.page-footer-branding a::after {
+        /* Removing link hover animation for page-footer logo */
+        content: none;
+}
+
+.page-footer-branding-logo {
+        /* Setting the footer logo dimensions */
+        max-width: 7.5em;
+        max-height: 7.5em;
+}
+
+.page-footer-branding-copyright {
+        /* Setting the copyright text styling */
+        margin-top: 0.25em;
+}
+
+.page-footer-contact {
+        /* Centering the contact text */
+        margin: 0 auto;
+}
+
+.page-footer-contact a:focus-visible {
+        /* Removing outline effect for footer email link in favor of underline effect */
+        outline: none;
+}
+
+/* ============================================ */
+
+/* ========== SHARED MAIN SECTION STYLING ========== */
+
+main {
+        /* Setting the main content background */
+        background-color: var(--bg-color-1);
+}
+
+/* =================================================== */
