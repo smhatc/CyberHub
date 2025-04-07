@@ -27,7 +27,70 @@
                 </nav>
         </header>
         <main>
-
+                <!-- Welcoming hero section with a heading and image to attract user attention upon page load using the <section> element for accessibility with screenreaders -->
+                <section class="blog-main-hero">
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/hashing-main-hero-hashingcoverfigure-image.jpg" alt="Hashing Banner">
+                        </figure>
+                        <h1 class="blog-heading">Hashing</h1>
+                        <p class="blog-para">This page serves as a getting-started point to the world of Hashing.</p>
+                </section>     
+                <hr>
+                <!--Section for the primary content of the main section using the <section> element for accessibility with screen readers-->
+                <section class="blog-main-content">
+                        <h2 class="blog-subheading">What Is Hashing?</h2>
+                        <p class="blog-para">Unlike <a href="symmetric-cryptography.html">Symmetric Cryptography</a> and <a href="asymmetric-cryptography.html">Asymmetric Cryptography</a> which deal with the process of transforming (or encrypting) plaintext into unintelligible ciphertext to ensure data confidentiality, Hashing is the process of transforming any given data (such as a key, string of characters, file or any kind of input) into a fixed alphanumeric value called a hash value to ensure data integrity. The method of transforming or "mapping" data using a mathematical function to produce a hash value is called a hash function.</p>
+                        <h2 class="blog-subheading">How It Works</h2>
+                        <h3 class="blog-subheading">Hash Functions</h3>
+                        <p class="blog-para">Hash functions take input data and apply a series of mathematical operations to it, resulting in a fixed-length string of characters. Hash functions theoretically ensure that hash value is unique for different inputs, though in practice, there may be rare collisions where two different inputs produce the same hash.</p>
+                        <p class="blog-para-bold">To ensure secure data integrity using Hashing:</p>
+                        <ol class="blog-list">
+                                <li class="blog-list-item">The data to be hashed is prepared as input.</li>
+                                <li class="blog-list-item">A Hashing algorithm is applied to generate a unique fixed-length hash value.</li>
+                                <li class="blog-list-item">The hash value is transmitted or stored alongside the original data for future verification.</li>
+                                <li class="blog-list-item">To verify the data’s integrity, the same Hashing algorithm is applied to the received or retrieved data, and the resulting hash is compared with the original hash value.</li>
+                        </ol>
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/hashing-main-content-hashingprocessfigure-image.png" alt="Hashing Process Demonstration">
+                        </figure>
+                        <h3 class="blog-heading">Message-Digest Algorithm 5 (MD5):</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Output:</span> 128 bits.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Security:</span> Insecure, vulnerable to collisions and preimage attacks. It is now obsolete for secure applications.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Performance:</span> Very fast but unsafe for cryptographic use.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Uses:</span> Historically for checksums and file integrity (now replaced by more secure methods).</li>
+                        </ul>
+                        <h3 class="blog-heading">Secure Hash Algorithm 2 (SHA-2):</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Output:</span> 224, 256, 384, or 512 bits.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Security:</span> Strong and resistant to collisions and preimage attacks.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Performance:</span> Slower than MD5 but widely used in modern cryptography (e.g. blockchain, TLS).</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Uses:</span> Common for digital signatures, certificates, and file integrity checks.</li>
+                        </ul>
+                        <h3 class="blog-subheading">Salting in Hashing</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item">Salting helps protect password hashes against dictionary attacks by introducing additional randomness. Password hash salting is when random data—a salt—is used as an additional input to a hash function that hashes a password.</li>
+                                <li class="blog-list-item">The goal of salting is to defend against dictionary attacks or attacks against hashed passwords which use a rainbow table.</li>
+                                <li class="blog-list-item">To salt a password hash, a new salt is randomly generated for each password. The salt and the password are concatenated and then processed with a cryptographic hash function. The resulting output (but not the original password) is stored with its salt in a database.</li>
+                                <li class="blog-list-item">Salts can make the size of the rainbow table required for a successful attack prohibitively large. Since salts are different in each password, they also protect commonly used passwords or those who use the same password on several sites.</li>
+                        </ul>
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/hashing-main-content-saltingfigure-image.png" alt="Salting Process Demonstration">
+                        </figure>
+                        <h2 class="blog-subheading">Benefits of Hashing</h2>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Data Integrity:</span> Hashing ensures that data has not been altered or tampered with. Usually, data is hashed at a certain time and the hash value is protected in some way. At a later time, the data can be hashed again and compared to the protected value. If the hash values match, the data has not been altered.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Password Storage:</span> Rather than storing the actual password, systems store a hash of the password. When you log in, the system hashes the password you enter and compares it to the stored hash, ensuring security by never storing the plaintext password.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Challenges & Considerations</h2>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Risk of Collisions:</span> Hashing can sometimes suffer from collisions, which occur when two different inputs produce the same hash value. Collisions can lead to decreased performance and increased lookup time, especially if the number of collisions is high.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Non-reversible:</span> Since hash functions are intended to be one-way functions, reversing the process and getting the original input data isn't computationally viable. This could be a drawback if reverse lookup is necessary.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Conclusion & Recommendations</h2>
+                        <p class="blog-para"> To summarize, Hashing is an essential concept in both cryptography and data structures. It transforms input data into fixed-length, unique hash values, making it useful for a variety of purposes like ensuring data integrity, password storage, efficient searching, and error detection. However, Hashing does come with certain limitations, such as the possibility of collisions, the non-reversible nature of hash functions, and the complexity in implementing hash-based systems.</p>
+                        <p class="blog-para"> Today, it is highly recommended to follow the best practices for Hashing to ensure secure and efficient data handling. Use modern hash functions like SHA-2 or SHA-3 while avoiding outdated ones like MD5 and SHA-1 to prevent vulnerabilities such as collision attacks. Always salt passwords to enhance security, making them resistant to rainbow table and dictionary attacks. Efficient collision-handling mechanisms, such as chaining or open addressing, are crucial for systems like hash tables. Regularly update Hashing algorithms to stay ahead of emerging weaknesses, and balance performance with security needs to choose the most suitable algorithm for your application.</p>
+                </section>
         </main>
         <footer class="page-footer">
                 <!--Branding block including website logo and copyright information-->
