@@ -399,7 +399,13 @@ hr {
                 display: inline-block;
         }        
 }
-      
+
+@media (max-width: 500px) {
+        .page-header-branding-title {
+                display: none;
+        }
+}
+
 /* =================================================== */
 
 .page-footer {
