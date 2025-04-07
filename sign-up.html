@@ -29,8 +29,20 @@
                         </ul>
                 </nav>
         </header>
-        <main>
-
+        <main class="sign-up-main">
+                <h1 class="sign-up-header">Sign Up</h1>
+                <form class="sign-up-form" novalidate>
+                        <!-- Email address label, input, and hidden error text -->
+                        <label class="sign-up-form-label" for="sign-up-form-emailaddress">Email Address</label>
+                        <input class="sign-up-form-input" id="sign-up-form-emailaddress" type="email" placeholder="Enter your email address">
+                        <div class="sign-up-form-guideline sign-up-form-emailaddressguideline"><span class="sign-up-form-guideline-icon">!</span> You need to provide a valid (youremail@example.com) email address.</div>
+                        <!-- Password label, input, and hidden error text -->
+                        <label class="sign-up-form-label" for="sign-up-form-password">Password</label>
+                        <input class="sign-up-form-input" id="sign-up-form-password" type="password" placeholder="Create a strong password">
+                        <div class="sign-up-form-guideline sign-up-form-passwordguideline"><span class="sign-up-form-guideline-icon">!</span> The password you entered does not meet the minimum complexity requirements (min. 8 characters, min. 1 digit, min. 1 uppercase letter), please create another one.</div>
+                        <input class="sign-up-form-input sign-up-form-submitbtn" type="submit" value="Sign Up">
+                        <div class="sign-up-form-refguideline">Already have an account? <a href="sign-in.html">Sign in</a>.</div>
+                </form>
         </main>
         <footer class="page-footer">
                 <!--Branding block including website logo and copyright information-->

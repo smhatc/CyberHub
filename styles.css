@@ -169,8 +169,10 @@ input {
 
 button:hover,
 button:focus-visible,
-input:hover:not(.main-registration-ctaform-form-inputerror),
-input:focus-visible:not(.main-registration-ctaform-form-inputerror) {
+input:hover:not(.sign-in-form-inputerror),
+input:focus-visible:not(.sign-in-form-inputerror),
+input:hover:not(.sign-up-form-inputerror),
+input:focus-visible:not(.sign-up-form-inputerror) {
         /* Adding general input and button hover and focus effect, can be overridden by more specific styles later as needed */
         box-shadow: var(--box-shadow-2);
 }
@@ -506,8 +508,79 @@ main {
 
 /* ===================================================== */
 
-/* ========== SIGN IN PAGE MAIN SECTION STYLING ========== */
+/* ========== SIGN IN/UP PAGES MAIN SECTION STYLING ========== */
 
+.sign-in-main,
+.sign-up-main {
+        min-height: 75vh;
+}
 
+.sign-in-header,
+.sign-up-header {
+        text-align: center;
+        margin: 1.75em auto;
+}
 
-/* ======================================================= */
+.sign-in-form,
+.sign-up-form {
+        width: 75%;
+        margin: 1.75em auto;
+}
+
+.sign-in-form-label,
+.sign-up-form-label {
+        font-weight: var(--font-weight-text-l);
+}
+
+.sign-in-form-input,
+.sign-up-form-input {
+        /* Styling form inputs */
+        width: 100%;
+        margin-bottom: 0.5em;
+}
+
+.sign-in-form-inputerror:hover,
+.sign-up-form-inputerror:hover,
+.sign-in-form-inputerror:focus-visible,
+.sign-up-form-inputerror:focus-visible {
+        /* Adding red (error) color to the box-shadow of hovered or focused elements instead of the default color to indicate an error using JS */
+        box-shadow: var(--box-shadow-fail) !important;
+}
+
+.sign-in-form-guideline,
+.sign-up-form-guideline,
+.sign-in-form-refguideline,
+.sign-up-form-refguideline {
+        font-size: var(--font-size-text-ss);
+        font-weight: var(--font-weight-text-l);
+        margin: 0.5em 0;
+}
+
+.sign-in-form-guideline,
+.sign-up-form-guideline {
+        /* Adding styling to each guideline container to display/hide error messages with JS */
+        display: none;
+        color: var(--color-fail);
+}
+
+.sign-in-form-guideline-icon,
+.sign-up-form-guideline-icon {
+        /* Creating an error (!) icon */
+        display: inline-block;
+        padding: 0.1em 0.7em;
+        border-radius: var(--border-radius-2);
+        text-align: center;
+        background-color: var(--color-fail);
+        color: var(--color-text-2);
+}
+
+.sign-in-form-submitbtn,
+.sign-up-form-submitbtn {
+        /* Styling the submit button, inherits the input hover and focus as it is an <input type="submit"> */
+        margin: 1em 0;
+        font-weight: var(--font-weight-text-l);
+        background-color: var(--bg-color-3);
+        color: var(--color-text-2);
+}
+
+/* ========================================================== */

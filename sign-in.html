@@ -29,8 +29,20 @@
                         </ul>
                 </nav>
         </header>
-        <main>
-                
+        <main class="sign-in-main">
+                <h1 class="sign-in-header">Sign In</h1>
+                <form class="sign-in-form" novalidate>
+                        <!-- Email address label, input, and hidden error text -->
+                        <label class="sign-in-form-label" for="sign-in-form-emailaddress">Email Address</label>
+                        <input class="sign-in-form-input" id="sign-in-form-emailaddress" type="email" placeholder="Enter your email address">
+                        <div class="sign-in-form-guideline sign-in-form-emailaddressguideline"><span class="sign-in-form-guideline-icon">!</span> The email address you entered is not associated with an account, please sign up first.</div>
+                        <!-- Password label, input, and hidden error text -->
+                        <label class="sign-in-form-label" for="sign-in-form-password">Password</label>
+                        <input class="sign-in-form-input" id="sign-in-form-password" type="password" placeholder="Enter your password">
+                        <div class="sign-in-form-guideline sign-in-form-passwordguideline"><span class="sign-in-form-guideline-icon">!</span> The password you entered is incorrect, please try again.</div>
+                        <input class="sign-in-form-input sign-in-form-submitbtn" type="submit" value="Sign In">
+                        <div class="sign-in-form-refguideline">Don't have an account? <a href="sign-up.html">Sign up</a>.</div>
+                </form>
         </main>
         <footer class="page-footer">
                 <!--Branding block including website logo and copyright information-->
