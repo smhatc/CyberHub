@@ -206,13 +206,13 @@ hr {
         background-color: var(--bg-color-2);
 }
 
-.page-header a,
+.page-header a:not(.sign-in-link),
 .page-header button {
         /* Adding a smooth transition to the outline on tab focus effect */
         transition: outline 0.2s ease;
 }
 
-.page-header a:focus-visible,
+.page-header a:not(.sign-in-link):focus-visible,
 .page-header button:focus-visible {
         /* Adding outline to links and buttons when focused with keyboard navigation */
         outline: var(--outline);
@@ -319,10 +319,16 @@ hr {
 }
 
 .sign-in-link {
+        transition: box-shadow 0.4s ease;
         padding: 0.5em 0.75em;
         border: var(--border-solid);
         background-color: var(--bg-color-3);
         color: var(--color-text-2) !important;
+}
+
+.sign-in-link:hover,
+.sign-in-link:focus-visible {
+        box-shadow: var(--box-shadow-2);
 }
 
 .sign-in-inside {
