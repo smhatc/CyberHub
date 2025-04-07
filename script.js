@@ -10,7 +10,7 @@ const header = document.querySelector(".page-header");
 let scrollbarWidth;
 
 // Navigation button and list from the header
-const navMenuBtn = document.querySelector(".page-header-navmenubtn");
+const navMenuBtn = document.querySelector(".page-header-controls-navmenubtn");
 const navigation = document.querySelector(".page-header-navigation");
 
 /* ================================================================================================ */

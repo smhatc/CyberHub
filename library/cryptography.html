@@ -15,14 +15,17 @@
                         <a href="../index.html"><img class="page-header-branding-logo" src="../images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
                         <p class="page-header-branding-title"><a href="../index.html">Cyber Hub</a></p>
                 </div>
-                <!--Right-side navigation hamburger menu button to display/hide the navigation links on smaller window sizes-->
-                <button class="page-header-navmenubtn">&#9776;</button>
+                <div class="page-header-controls">
+                        <!--Right-side navigation hamburger menu button to display/hide the navigation links on smaller window sizes and a sign in link to display when this menu is shown instead of the navigation's link-->
+                        <a href="../sign-in.html" class="sign-in-link sign-in-outside">Sign In</a>
+                        <button class="page-header-controls-navmenubtn">&#9776;</button>
+                </div>
                 <!--Right-side navigation links using the <nav> element for accessibility with screen readers-->
                 <nav class="page-header-navigation">
                         <ul class="page-header-navigation-list">
                                 <li class="page-header-navigation-list-link"><a href="../index.html">Home</a></li>
                                 <li class="page-header-navigation-list-link"><a href="../library.html">Library</a></li>
-                                <li class="page-header-navigation-list-link"><a href="../sign-in.html" class="sign-in-link">Sign In</a></li>
+                                <li class="page-header-navigation-list-link sign-in-inside"><a href="../sign-in.html" class="sign-in-link">Sign In</a></li>
                         </ul>
                 </nav>
         </header>

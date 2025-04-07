@@ -262,7 +262,16 @@ hr {
         content: none;
 }
 
-.page-header-navmenubtn {
+.page-header-controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0.5em;
+}
+
+.page-header-controls-navmenubtn {
         /* Hiding the navigation menu button for large enough window sizes, only showing it later when needed */
         display: none;
         padding: 0 0.5em;
@@ -271,16 +280,16 @@ hr {
         font-size: var(--font-size-text-l);
 }
 
-.page-header-navmenubtn:hover,
-.page-header-navmenubtn:focus-visible {
+.page-header-controls-navmenubtn:hover,
+.page-header-controls-navmenubtn:focus-visible {
         /* Removing element-level box-shadow effect on hover and focus for the menu button */
         box-shadow: none;
 }
 
 .page-header-navigation {
         /* Styling <nav> element on the right */
-        padding: 0 0.5em;
-        margin: 0 0.5em;
+        padding: 0.5em;
+        margin: 0.5em;
         font-size: var(--font-size-text-m);
 }
 
@@ -307,11 +316,19 @@ hr {
         content: none;
 }
 
-.page-header-navigation-list-link .sign-in-link {
+.sign-in-link {
         padding: 0.5em 0.75em;
         border: var(--border-solid);
         background-color: var(--bg-color-3);
-        color: var(--color-text-2);
+        color: var(--color-text-2) !important;
+}
+
+.sign-in-inside {
+        display: inline-block;
+}
+
+.sign-in-outside {
+        display: none;
 }
 
 @media (max-width: 1460px) {
@@ -327,7 +344,7 @@ hr {
                 margin-left: 0.25em;
         }
         
-        .page-header-navmenubtn {
+        .page-header-controls-navmenubtn {
                 /* Showing the hamburger menu button in preparation for fixing the squashed navigation list */
                 display: block;
                 padding: 0 0.25em;
@@ -370,7 +387,15 @@ hr {
                 display: block;
                 padding: 0.5em 0;
                 margin: 0.5em 0;
-        }  
+        }
+
+        .sign-in-inside {
+                display: none;
+        }
+        
+        .sign-in-outside {
+                display: inline-block;
+        }        
 }
       
 /* =================================================== */
@@ -486,15 +511,3 @@ main {
 
 
 /* ======================================================= */
-
-/* ========== HOME PAGE MAIN SECTION STYLING ========== */
-
-
-
-/* ==================================================== */
-
-/* ========== LIBRARY PAGES MAIN SECTION STYLING ========== */
-
-
-
-/* ======================================================== */
