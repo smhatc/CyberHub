@@ -53,9 +53,6 @@
                                 <li class="blog-list-item">The hash value is transmitted or stored alongside the original data for future verification.</li>
                                 <li class="blog-list-item">To verify the data’s integrity, the same Hashing algorithm is applied to the received or retrieved data, and the resulting hash is compared with the original hash value.</li>
                         </ol>
-                        <figure class="blog-figure">
-                                <img class="blog-figure-image" src="../../images/hashing-main-content-hashingprocessfigure-image.png" alt="Hashing Process Demonstration">
-                        </figure>
                         <h3 class="blog-heading">Message-Digest Algorithm 5 (MD5):</h3>
                         <ul class="blog-list">
                                 <li class="blog-list-item"><span class="blog-list-item-bold">Output:</span> 128 bits.</li>
@@ -77,9 +74,6 @@
                                 <li class="blog-list-item">To salt a password hash, a new salt is randomly generated for each password. The salt and the password are concatenated and then processed with a cryptographic hash function. The resulting output (but not the original password) is stored with its salt in a database.</li>
                                 <li class="blog-list-item">Salts can make the size of the rainbow table required for a successful attack prohibitively large. Since salts are different in each password, they also protect commonly used passwords or those who use the same password on several sites.</li>
                         </ul>
-                        <figure class="blog-figure">
-                                <img class="blog-figure-image" src="../../images/hashing-main-content-saltingfigure-image.png" alt="Salting Process Demonstration">
-                        </figure>
                         <h2 class="blog-subheading">Benefits of Hashing</h2>
                         <ul class="blog-list">
                                 <li class="blog-list-item"><span class="blog-list-item-bold">Data Integrity:</span> Hashing ensures that data has not been altered or tampered with. Usually, data is hashed at a certain time and the hash value is protected in some way. At a later time, the data can be hashed again and compared to the protected value. If the hash values match, the data has not been altered.</li>
