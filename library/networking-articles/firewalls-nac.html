@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Firewalls and Network Access Controls - Cyber Hub</title>
+        <link rel="icon" href="../../images/cyber-hub-logo.png" type="image/png">
+        <link rel="stylesheet" href="../../styles.css"> <!--Linking to external CSS file-->
+        <script src="../../script.js" defer></script> <!--Linking to external JS file-->
+</head>
+<body>
+        <header class="page-header">
+                <!--Left-side branding block including website logo and title-->
+                <div class="page-header-branding">
+                        <a href="../../index.html"><img class="page-header-branding-logo" src="../../images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
+                        <p class="page-header-branding-title"><a href="../../index.html">Cyber Hub</a></p>
+                </div>
+                <div class="page-header-controls">
+                        <!--Right-side navigation hamburger menu button to display/hide the navigation links on smaller window sizes and a sign in link to display when this menu is shown instead of the navigation's link-->
+                        <a href="../../sign-in.html" class="sign-in-link sign-in-outside">Sign In</a>
+                        <button class="page-header-controls-navmenubtn">&#9776;</button>
+                </div>
+                <!--Right-side navigation links using the <nav> element for accessibility with screen readers-->
+                <nav class="page-header-navigation">
+                        <ul class="page-header-navigation-list">
+                                <li class="page-header-navigation-list-link"><a href="../../index.html">Home</a></li>
+                                <li class="page-header-navigation-list-link"><a href="../../library.html">Library</a></li>
+                                <li class="page-header-navigation-list-link sign-in-inside"><a href="../../sign-in.html" class="sign-in-link">Sign In</a></li>
+                        </ul>
+                </nav>
+        </header>
+        <main>
+                <!-- Welcoming hero section with a heading and image to attract user attention upon page load using the <section> element for accessibility with screenreaders -->
+                <section class="blog-main-hero">
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/firewalls-blog-main-hero-firewallscoverfigure-image.webp" alt="Firewalls Banner">
+                        </figure>
+                        <h1 class="blog-heading">Firewalls and Network Access Controls</h1>
+                        <p class="blog-para">This page serves as a getting-started point to the world of Firewalls and Network Access Controls.</p>
+                </section>
+                <hr>
+                <!--Section for the primary content of the main section using the <section> element for accessibility with screen readers-->
+                <section class="blog-main-content">
+                        <h2 class="blog-subheading">What are Firewalls and Network Access Controls?</h2>
+                        <p class="blog-para">A firewall is a type of network security device that uses established security rules to track and control all network traffic, inflow and outgoing. Between dependable internal networks and unreliable external networks (such as the internet), it acts like a barrier.</p>
+                        <p class="blog-para">Network Access Controls (NAC) is a similar concept which revolves around the idea of being a security solution that provides rules to devices that have access to a network. It enhances overall network security by limiting access to the network to only authorized and compliant devices.</p>
+                        <h2 class="blog-subheading">How It Works</h2>
+                        <h3 class="blog-subheading">Firewalls</h3>
+                        <p class="blog-para">Using security rules, firewalls examine data packets and decide whether to permit or prohibit them.
+                        Firewalls come in a variety of forms, such as application-layer firewalls, stateful inspection firewalls, and packet-filtering firewalls.</p>
+                        <p class="blog-para">Furthermore, for helping administrators in keeping an eye on network security, firewalls commonly log traffic and send out alerts for suspicious activity.</p>
+                        <h3 class="blog-subheading">Network Access Controls</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Authentication:</span> NAC uses methods like passwords and certificates to confirm the identity of devices requesting to connect to the network.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Policy Enforcement:</span> NAC decides whether a device has access to the network and which resources it may access based on established security policies.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Compliance Checks:</span> Before allowing access, NAC can verify that security standards (such as antivirus software and updates) are being followed.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Quarantine and Remediation:</span> To bring non-compliant devices into compliance, they might be isolated or sent to remediation procedures.</li>
+                        </ul>
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/firewalls-blog-main-content-nacfigure-image.png" alt="Network Access Controls Art">
+                        </figure>
+                        <h2 class="blog-subheading">Benefits of Firewalls and NAC</h2>
+                        <h3 class="blog-subheading">Firewalls</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Enhanced Security:</span> Protects networks against malicious websites and illegal access.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Traffic Control:</span> Gives administrators the ability to specify guidelines for specific services and apps.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Monitoring and Reporting:</span> Uses logs and alerts to provide details on network activity and any threats.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Segmentation:</span> To improve security, the network can be organized into segments.</li>
+                        </ul>
+                        <h3 class="blog-subheading">Network Access Controls</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Improved Security:</span> Reduces vulnerabilities by ensuring that only compliant and authorized devices access the network.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Policy Enforcement:</span> Allows businesses to uniformly apply security regulations to every device.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Control and Visibility:</span> Offers insight into the network's device count and compliance status.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Automated Response:</span> Able to isolate infected devices in response to security issues automatically.</li>
+                        </ul>
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/firewalls-blog-main-content-considerationsfigure-image.jpg" alt="Firewalls and NAC Challenges Art">
+                        </figure>
+                        <h2 class="blog-subheading">Challenges & Considerations</h2>
+                        <h3 class="blog-subheading">Firewalls</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Configuration Complexity:</span> Setting up a firewall correctly can be difficult and may require certain expertise.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">False Positives:</span> Incorrect blocking of authorized traffic can lead to service interruptions.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Maintenance:</span> To ensure ongoing performance, frequent updates and observation are required.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold"> Limited Protection:</span> Not all attacks, including phishing, can be blocked by firewalls alone.</li>
+                        </ul>
+                        <h3 class="blog-subheading">Network Access Controls</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Complex Implementation:</span> Integrating NAC with current security systems might be necessary and setting it up can be challenging.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">User Experience:</span> If improperly handled, particularly during authentication, it may cause difficulty in the user experience.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Cost:</span> Depending on the extent and complexity of the network, implementing NAC solutions may be costly.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold"> Maintenance:</span> To keep up with evolving security risks, constant oversight and updates are required.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Conclusion & Recommendations</h2>
+                        <p class="blog-para">A strong network security plan should involve both firewalls and network access controls. While NAC makes sure that only devices that comply can connect, firewalls protect networks from threats and illegal access. Although these technologies improve security, they also present challenges that call for cautious preparation and handling. Organizations can greatly enhance their overall security posture by adopting these solutions.</p>
+                </section>
+        </main>
+        <footer class="page-footer">
+                <!--Branding block including website logo and copyright information-->
+                <div class="page-footer-branding">
+                        <a href="../../index.html"><img class="page-footer-branding-logo" src="../../images/cyber-hub-logo.png" alt="Cyber Hub Logo"></a>
+                        <p class="page-footer-branding-copyright">&copy; 2025 Cyber Hub</p>
+                </div>
+                <!--Contact information with an email link-->
+                <p class="page-footer-contact">Need to get in touch? Email: <a href="mailto:202301067@student.polytechnic.bh">202301067@student.polytechnic.bh</a></p>
+        </footer>
+</body>
+</html>
