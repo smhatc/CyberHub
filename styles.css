@@ -322,6 +322,8 @@ hr {
         transition: box-shadow 0.4s ease;
         padding: 0.5em 0.75em;
         border: var(--border-solid);
+        font-family: var(--font-family-h1h2);
+        font-size: var(--font-size-text-m);
         background-color: var(--bg-color-3);
         color: var(--color-text-2) !important;
 }
@@ -335,11 +337,15 @@ hr {
         display: inline-block;
 }
 
+.sign-in-inside a {
+        padding-block: 0.68em;
+}
+
 .sign-in-outside {
         display: none;
 }
 
-@media (max-width: 1460px) {
+@media (max-width: 1000px) {
         /* Creating media query to stop the navigation items from being squashed on smaller window sizes */
         .page-header-branding {
                 /* Lowering margin between branding block and other blocks */
