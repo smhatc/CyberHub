@@ -3,7 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Access Control - Cyber Hub</title>
+        <title>User Account Control - Cyber Hub</title>
         <link rel="icon" href="../../images/cyber-hub-logo.png" type="image/png">
         <link rel="stylesheet" href="../../styles.css"> <!--Linking to external CSS file-->
         <script src="../../script.js" defer></script> <!--Linking to external JS file-->
@@ -30,73 +30,43 @@
                 </nav>
         </header>
         <main>
-                <img src="../../images/UAC_Operating systems.jpg" alt="" aria-placeholder="https://www.shutterstock.com/image-illustration/pam-acronym-privileged-access-management-sytem-2391839393">
-
-
-
-                What is User account Control 
-        
-        The User Account Control (UAC) is a security feature that is supported by windows operating systems. It limits the program from preforming certain actions that require administrative privilege. The UAC is enforces security access control by allowing running several programs with basic privileges, that cannot access some programs and files without permission. When you want to access any program or file that you don’t have permission the UAC will prompt the user for permission or administrators credentials. Privilege management involves managing and assisting users privileges to reduce security risks,and ensure that it follows organizational policies.
-        
-        
-        Hoe It  works?
-        
-        User Account control (UAC)
-        
-        It works by prompting users when a process requires permission to access it. This is preventing from unauthorized application from making wide changes. It organizes applications and actions into different privileges levels and requires administrator authentication for important changes.
-        
-        
-        Privilege escalation prevention
-        
-        Privileges management helps reduce privilege escalation attacks by ensuring that users and applications have only the minimum necessary permissions. It uses the principle of least privilege (PoLP), it reduces the risk of malware and other threats.
-        
-        
-        
-        Role- Based Access control (RBAC)
-        
-        RBAC is responsible to assign permissions based on user roles, and ensuring that only authorized personnel can access to sensitive system resources. It will reduce potential risks by limiting unnecessary access.
-        
-        
-        Just in time privileges 
-        
-        JIT is a security practice that give privilege granted to access applications or systems in a limited period of time on a specific tasks to do. This helps to reduce security vulnerabilities, and prevents to give permanent administrative privileges to unauthorized users.
-        
-        
-        Benefits of UAC and Privilege management 
-        
-        
-        1. Improve security: prevent hackers and unauthorized programs from making critical system modifications.
-        
-         2. Follows with Regulations: ensure the system adherence to security policies such as GDPR,HIPAA, and NIST standards.
-        
-         3. Minimize attack surface: Limits the number of users to give them high level privileges, lower the potential cyber threats.
-        
-        
-        4. Improved system stability: prevent any malware or malicious activity to system that could lead to crashes or vulnerabilities.
-        
-        
-        
-        Challenges:
-        
-        
-        1. Cases annoyance through frequent interruption
-        
-        The frequent UAC prompts may cause inconvenience, leading to users bypassing security measures.
-        
-        2. Triggers false positives 
-        The UAC  is prompts even when an action is safe and secure. This things happens when device behaves differently under elevated privileges which leads to unnecessary permissions requests.
-        
-        
-        3. Administrative responsibility
-        
-        The admin is responsible to managing and monitoring who receives full privileges and who receives the limited privileges, and this requires ongoing efforts and dedication resources.
-        
-        
-        
-        
-        Conclusion:
-        
-        User Account Control (UAC) and privilege management are main components of secure operating systems, ensuring that users and programs function with least required privileges. While it enhances security and compliance, careful implementation and management are essential to mitigate user inconvenience and administrative challenges. Organizations must balance between security and usability to maintain strong cybersecurity frameworks.
+                <!-- Welcoming hero section with a heading and image to attract user attention upon page load using the <section> element for accessibility with screenreaders -->
+                <section class="blog-main-hero">
+                        <figure class="blog-figure">
+                                <img class="blog-figure-image" src="../../images/uac-blog-main-hero-uaccoverfigure-image.jpg" alt="User Account Control Banner">
+                        </figure>
+                        <h1 class="blog-heading">User Account Control</h1>
+                        <p class="blog-para">This page serves as a getting-started point to the world of User Account Control.</p>
+                </section>
+                <hr>
+                <!--Section for the primary content of the main section using the <section> element for accessibility with screen readers-->
+		<section class="blog-main-content">
+                        <h2 class="blog-subheading">What Is User Account Control?</h2>
+                        <p class="blog-para">User Account Control (UAC) is a security feature that is supported by the Windows operating system, with similar implementations present in other operating systems like macOS and Linux. It limits programs from performing certain actions that require administrative privileges. UAC enforces security access controls by allowing running several programs with basic privileges, all of which cannot access certain programs and files without elevated permissions. When the user wants to access any program or file that they do not have permission to, UAC will prompt the user for permission or the administrator’s credentials.</p>
+                        <h2 class="blog-subheading">How It Works</h2>
+                        <h3 class="blog-subheading">Key Concepts</h3>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">User Account Control:</span> Prompts users when a process requires elevated permission to access it. This prevents unauthorized applications from making potentially dangerous changes and organizes applications and actions into different privilege levels, requiring administrator authentication for critical changes.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Privilege Escalation Prevention:</span> Privilege management helps reduce privilege escalation attacks by ensuring that users and applications have only the minimum necessary permissions. It uses the principle of least privilege (PoLP), reducing the risk of malware and other threats.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Role-Based Access Control:</span> RBAC is responsible for assigning permissions based on user roles and ensuring that only authorized personnel can access sensitive system resources. It reduces potential risks by limiting unnecessary access.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Just-in-Time Privileges:</span> JIT is a security practice that grants privileges to access applications or systems for a limited time to perform specific tasks. This helps to reduce security vulnerabilities and prevents giving permanent administrative privileges to unauthorized users.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Benefits of User Account Control</h2>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Improved Security:</span> Prevents hackers and unauthorized programs from making critical system modifications.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Regulation Compliance:</span> Ensures systems’ adherence to security policies such as GDPR, HIPAA, and NIST.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Reduced Attack Surface:</span> Limits the number of users given high level privileges, lowering the number of potential attacks on the systems.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Improved System Stability:</span> Prevents malware or malicious activity which could lead to system crashes and interrupted workflows.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Challenges & Considerations</h2>
+                        <ul class="blog-list">
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Frequent Interruptions:</span> Frequent UAC prompts may cause inconvenience, leading to users attempting to bypass security measures.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">False Positives:</span> UAC prompts users even when an action is safe and secure. This may happen when a trusted program requires administrative privileges for some of its behavior, misleading users into thinking the program could be malicious.</li>
+                                <li class="blog-list-item"><span class="blog-list-item-bold">Administrative Responsibility:</span> The administrator is responsible for managing and monitoring which users receive full privileges and which users receive limited privileges, resulting in a single point of failure should the administrator be untrusted or incompetent.</li>
+                        </ul>
+                        <h2 class="blog-subheading">Conclusion & Recommendations</h2>
+                        <p class="blog-para">UAC and privilege management are crucial components of secure operating systems, ensuring that users and programs function with the least required privileges. While it enhances security and legal compliance, careful implementation and management are essential to mitigate user inconvenience and administrative challenges. Organizations must balance between security and usability to maintain strong cybersecurity frameworks.</p>
+                </section>
         </main>
         <footer class="page-footer">
                 <!--Branding block including website logo and copyright information-->
