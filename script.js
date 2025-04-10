@@ -162,5 +162,6 @@ if (signUpForm) {
 }
 
 if (signInForm) {
+        // Listens for form submission to execute a function which validates the input values provided by the user
         signInForm.addEventListener("submit", validateSignInForm);
 }
