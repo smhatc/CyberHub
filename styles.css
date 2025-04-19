@@ -42,26 +42,19 @@
 
         --outline: 0.4rem solid #0f62fe;
 
-        --box-shadow-1: 0rem 0rem 1rem 0.4rem #de8b25;
-        --box-shadow-2: 0rem 0rem 1rem 0.4rem #37505d;
-        --box-shadow-3: 0rem 0rem 2rem -0.1rem #00000066;
+        --box-shadow-1: 0rem 0rem 1rem 0.4rem #37505d;
+        --box-shadow-2: 0rem 0rem 2rem -0.1rem #00000066;
         --box-shadow-fail: 0rem 0rem 1rem 0.4rem #b82626;
 
         --color-text-1: #1a1c20;
         --color-text-2: #ebebef;
-        --color-text-3: #37505d;
         --color-links-1: #37505d;
-        --color-links-2: #ebebef;
         --color-fail: #b82626;
-        --color-success: #26b826;
         --color-h1h2-1: #1c2930;
-        --color-h1h2-2: #ebebef;
 
         --bg-color-1: #ebebef;
         --bg-color-2: #dce0e6;
         --bg-color-3: #37505d;
-        --bg-color-4: #de8b25;
-        --bg-color-5: #090c1b;
 }
 
 html {
@@ -174,7 +167,7 @@ input:focus-visible:not(.sign-in-form-inputerror),
 input:hover:not(.sign-up-form-inputerror),
 input:focus-visible:not(.sign-up-form-inputerror) {
         /* Adding general input and button hover and focus effect, can be overridden by more specific styles later as needed */
-        box-shadow: var(--box-shadow-2);
+        box-shadow: var(--box-shadow-1);
 }
 
 button:hover,
@@ -185,9 +178,10 @@ input[type="submit"]:hover {
 
 hr {
         /* Giving margin to and setting the width of <hr> elements */
-        width: 37.5%;
-        height: 0.1rem;
+        width: 45%;
+        height: 0.25rem;
         margin: 2em auto;
+        border-radius: var(--border-radius-1);
         background-color: var(--bg-color-3);
 }
 
@@ -313,7 +307,8 @@ hr {
         color: var(--color-h1h2-1);
 }
 
-.page-header-navigation-list-link a::after {
+.page-header-navigation-list-link a::after,
+.sign-in-link::after {
         /* Removing link hover animation for header navigation list links */
         content: none;
 }
@@ -330,7 +325,7 @@ hr {
 
 .sign-in-link:hover,
 .sign-in-link:focus-visible {
-        box-shadow: var(--box-shadow-2);
+        box-shadow: var(--box-shadow-1);
 }
 
 .sign-in-inside {
@@ -488,7 +483,177 @@ main {
 
 /* ========== HOME PAGE MAIN SECTION STYLING ========== */
 
+.home-hero {
+        /* Using Flexbox to keep the text on the left and a supporting graphic on the right, and making this section span the entire viewport */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        min-height: calc(100svh - 118.8px);
+        background-color: var(--bg-color-2);
+}
 
+.home-hero-text {
+        /* Having the text section take 60% of the Flexbox split, and using Flexbox to position the items inside it */
+        flex: 1 1 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: 5em;
+}
+
+.home-hero-text-cta-btns {
+        /* Using Flexbox to center the buttons and wrap them on smaller window sizes */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.25em;
+        margin-bottom: 0.625em;
+}
+
+.home-hero-text-cta-btns-btnlink {
+        /* Styling the <a> elements to look like actual buttons */
+        transition: box-shadow 0.4s ease;
+        padding: 0.5em 0.75em;
+        border: var(--border-solid);
+        color: var(--color-text-1);
+}
+
+.home-hero-text-cta-btns-btnlink:hover,
+.home-hero-text-cta-btns-btnlink:focus-visible {
+        /* Adding a shadow effect on hover and focus of the buttons, smoothed by a transition */
+        box-shadow: var(--box-shadow-1);
+}
+
+.home-hero-text-cta-btns-btnlink::after {
+        /* Disabling the global <a> element underline effect for the links-turned-buttons */
+        content: none;
+}
+
+.home-hero-text-cta-btns-signuplink {
+        /* Giving the sign up button a distinct color to make it stand out */
+        background-color: var(--bg-color-3);
+        color: var(--color-text-2);
+}
+
+.home-hero-imagefigure {
+        /* Having the image container take up 40% of the Flexbox split and serving as a container for the position: absolute image within it */
+        flex: 1 1 40%;
+        position: relative;
+        overflow: hidden;
+}
+
+.home-hero-imagefigure-image {
+        /* Using position: absolute to position the image inside the figure and prevent it from overflowing outside of it, also preventing weird viewport height cosmetic issues on zoom in */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: var(--border-radius-1);
+        border-bottom-left-radius: var(--border-radius-1);
+}
+
+.home-csinfo {
+        /* Centering the .home-csinfo section and pushing it off from the edges and other sections */
+        width: fit-content;
+        padding: 2.5em 2.5em 0 2.5em;
+        margin: auto;
+        scroll-margin-top: 118.8px;
+}
+
+.home-csinfo-hr {
+        /* Lowering the margin from the global default of the <hr> elements in this section only */
+        margin: 1em auto;
+}
+
+.home-csinfo-heading,
+.home-csinfo-para {
+        /* Centering the text inside this section */
+        text-align: center;
+}
+
+.home-csinfo-para {
+        /* Adding some margin between the paragraphs */
+        margin: 1.25em auto;
+}
+
+.home-sdg {
+        /* Pushing this section from the edges and giving it a dashed, rounded border */
+        margin: 2.5em;
+        border: var(--border-dashed);
+        border-radius: var(--border-radius-1);
+}
+
+.home-sdg-imagefigure {
+        /* Limiting the height of the image by reducing the figure's height, also centering it */
+        height: 200px;
+        margin: 2.5em auto;
+}
+
+.home-sdg-imagefigure-image {
+        /* Expanding the image to take up the full width and height of its <figure> element */
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+        margin: auto;
+}
+
+.home-sdg-text {
+        /* Centering the text and pushing it from the edges */
+        width: fit-content;
+        padding: 0 1.25em;
+        margin: 2.5em auto;
+}
+
+.home-sdg-text-heading,
+.home-sdg-text-para {
+        /* Centering the text in this section */
+        text-align: center;
+}
+
+.home-sdg-text-para {
+        /* Spacing and centering the paragraphs */
+        margin: 1.25em auto;
+}
+
+.home-about {
+        /* Centering this section and pushing it from the edges */
+        width: fit-content;
+        padding: 0 2.5em 2.5em;
+        margin: auto;
+}
+
+.home-about-heading,
+.home-about-para {
+        /* Centering the text inside this section */
+        text-align: center;
+}
+
+.home-about-para {
+        /* Spacing the paragraphs */
+        margin: 1.25em auto;
+}
+
+@media (max-width: 1000px) {
+        /* Using a media query to fix the look of the page on smaller window sizes */
+        .home-hero-text {
+                /* Reducing the padding inside the hero section's text as it looked too empty */
+                padding: 2.5em;
+        }
+
+        .home-hero-imagefigure {
+                /* Hiding the supporting, artistic image in the hero section as there is no space for it on smaller window sizes */
+                display: none;
+        }
+}
 
 /* ==================================================== */
 
@@ -643,7 +808,12 @@ main {
 .cat-grid-item-link:hover,
 .cat-grid-item-link:focus-visible {
         /* Creating a shadow effect on hover and focus of the links */
-        box-shadow: var(--box-shadow-2);
+        box-shadow: var(--box-shadow-1);
+}
+
+.cat-grid-item-link::after {
+        /* Disabling the global <a> element's hover and focus effect as this is technically a button */
+        content: none;
 }
 
 .cat-grid-item-link-arrow {
@@ -676,7 +846,7 @@ main {
         max-width: 100%;
         height: auto;
         border-radius: var(--border-radius-1);
-        box-shadow: var(--box-shadow-3);
+        box-shadow: var(--box-shadow-2);
 }
 
 .blog-para-bold,
